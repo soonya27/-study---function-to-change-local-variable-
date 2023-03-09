@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const STATE = updateState();
+        function updateState() {
+            // const state = '<c:out value="${param.state}" />';
+            const state = 1;
+
+            function changeState(updatedState) {
+                return updatedState ?? state;
+            }
+            return changeState;
+        }
+
+
+        console.log(STATE());
+
+        //state값 변경
+        console.log(STATE(0));
+        console.log(STATE(2));
+    </script>
+</body>
+
+</html>
